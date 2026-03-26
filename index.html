@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>практическая 3</title>
+</head>
+<body>
+    <div id="text">Каталог товаров</div>
+    <h4 id="list">Книги</h4>
+    <ul id="ulul">
+        <li id="listotec">Отечественные
+            <ul id="otec">
+                <li>Фэнтези</li>
+                <li>Романтические</li>
+                <li>Научпоп</li>
+            </ul>
+        </li>
+        <li id="listsarub">Зарубежные
+            <ul id="sarub">
+                <li>Детективы</li>
+                <li>Научная фантастика</li>
+                <li>Исторические</li>
+            </ul>
+        </li>
+    </ul>
+    <h4 id="dvdlist">DVD</h4>
+    <ul id="dvdulul">
+        <li id="listdvdotec">Отечественные
+            <ul id="dvdotec">
+                <li>Детективы</li>
+                <li>Научная фантастика</li>
+                <li>Исторические</li>
+            </ul>
+        </li>
+        <li id="listdvdsarub">Зарубежные
+            <ul id="dvdsarub">
+                <li>Фэнтези</li>
+                <li>Романтические</li>
+                <li>Научпоп</li>
+            </ul>
+        </li>
+    </ul>
+    <script>
+        const list = document.getElementById('list')
+        const ulul = document.getElementById('ulul')
+        const dvdlist = document.getElementById('dvdlist')
+        const dvdulul = document.getElementById('dvdulul')
+        const otec = document.getElementById('otec')
+        const listotec = document.getElementById('listotec')
+        const sarub = document.getElementById('sarub')
+        const listsarub = document.getElementById('listsarub')
+        const dvdotec = document.getElementById('dvdotec')
+        const listdvdotec = document.getElementById('listdvdotec')
+        const dvdsarub = document.getElementById('dvdsarub')
+        const listdvdsarub = document.getElementById('listdvdsarub')
+        ulul.style.display = 'none'
+        dvdulul.style.display = 'none'
+        otec.style.display = 'none'
+        sarub.style.display = 'none'
+        dvdotec.style.display = 'none'
+        dvdsarub.style.display = 'none'
+        function antiprisrak(peremen){
+            if (peremen.style.display === 'none'){
+                peremen.style.display = 'grid'
+            }
+            else{peremen.style.display = 'none'}
+        }
+        list.addEventListener('click',() => antiprisrak(ulul))
+        dvdlist.addEventListener('click',() => antiprisrak(dvdulul))
+        listotec.addEventListener('click',() => antiprisrak(otec))
+        listsarub.addEventListener('click',() => antiprisrak(sarub))
+        listdvdsarub.addEventListener('click',() => antiprisrak(dvdsarub))
+        listdvdotec.addEventListener('click',() => antiprisrak(dvdotec))
+    </script>
+</body>
+
+</html>
